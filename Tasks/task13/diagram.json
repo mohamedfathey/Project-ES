@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "author": "Mohamed Fathy",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard", "id": "bb1", "top": 121.8, "left": 204.4, "attrs": {} },
+    { "type": "wokwi-arduino-mega", "id": "mega", "top": -105, "left": 6, "attrs": {} },
+    { "type": "wokwi-lcd1602", "id": "lcd1", "top": -438.17, "left": 534.4, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": -49.3, "left": 422.2, "attrs": {} }
+  ],
+  "connections": [
+    [ "lcd1:D7", "mega:7", "orange", [ "v-76.8", "h-470.1" ] ],
+    [ "lcd1:D6", "mega:6", "orange", [ "v-67.2", "h-422.2" ] ],
+    [ "lcd1:D5", "mega:5", "orange", [ "v-48", "h-403.1" ] ],
+    [ "lcd1:D4", "mega:4", "orange", [ "v-28.8", "h-393.6" ] ],
+    [ "lcd1:V0", "bb1:32t.b", "purple", [ "v0" ] ],
+    [ "lcd1:RS", "mega:1", "green", [ "v-19.2", "h-287.7" ] ],
+    [ "lcd1:E", "mega:2", "blue", [ "v-9.6", "h-326.4" ] ],
+    [ "bb1:tp.1", "mega:5V", "red", [ "v0" ] ],
+    [ "bb1:tn.2", "mega:GND.2", "black", [ "v0" ] ],
+    [ "lcd1:K", "bb1:tn.37", "black", [ "v0" ] ],
+    [ "lcd1:A", "bb1:tp.36", "red", [ "v0" ] ],
+    [ "lcd1:RW", "bb1:tn.28", "black", [ "v0" ] ],
+    [ "lcd1:VSS", "bb1:tn.24", "black", [ "v0" ] ],
+    [ "lcd1:VDD", "bb1:tp.24", "red", [ "v0" ] ],
+    [ "pot1:SIG", "bb1:32t.c", "purple", [ "v0" ] ],
+    [ "pot1:VCC", "bb1:tp.20", "red", [ "v0" ] ],
+    [ "pot1:GND", "bb1:tn.19", "black", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}

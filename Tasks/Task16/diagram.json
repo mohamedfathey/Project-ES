@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "author": "Mohamed Fathy",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 108.08, "left": 14.49, "attrs": {} },
+    {
+      "type": "wokwi-stepper-motor",
+      "id": "stepper1",
+      "top": -230.12,
+      "left": 193.56,
+      "attrs": { "size": "17" }
+    },
+    { "type": "wokwi-a4988", "id": "drv1", "top": 210.85, "left": -169.04, "attrs": {} }
+  ],
+  "connections": [
+    [ "drv1:DIR", "uno:6", "green", [ "h0.73", "v50.51", "h149.4", "v-259.32", "h225.17" ] ],
+    [ "drv1:STEP", "uno:7", "cyan", [ "h-15.28", "v-265.37", "h377.77" ] ],
+    [ "drv1:SLEEP", "drv1:RESET", "red", [ "h-7.81", "v-9.26" ] ],
+    [ "drv1:GND.1", "uno:GND.2", "black", [ "v110.35", "h5.53" ] ],
+    [ "drv1:VDD", "uno:5V", "red", [ "h63.15", "v96.47", "h1.07" ] ],
+    [ "stepper1:B+", "drv1:1B", "red", [ "v94.42", "h-344.51", "v11.74" ] ],
+    [ "stepper1:A+", "drv1:1A", "red", [ "v83.75", "h-372.26", "v217.7" ] ],
+    [ "stepper1:A-", "drv1:2A", "black", [ "v70.94", "h-305.03", "v221.97" ] ],
+    [ "stepper1:B-", "drv1:2B", "black", [ "v144.58", "h-377.59", "v135.53" ] ]
+  ],
+  "dependencies": {}
+}
